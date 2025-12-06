@@ -4,7 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   font-family: "Poppins", sans-serif;
 }
 
@@ -18,7 +18,7 @@ body {
 /* NAVBAR */
 /* -------------------- */
 .navbar {
-  background-color: #9f2b68; /* tono ciruela que combina con tu marca */
+  background-color: #9f2b68; 
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
@@ -85,6 +85,13 @@ body {
 
 .btn:hover {
   background-color: #a1bea0;
+}
+
+.hero-content div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 /* -------------------- */
@@ -186,6 +193,7 @@ body {
 /* -------------------- */
 .video-item iframe {
   border-radius: 12px;
+  width: 100%;
 }
 
 /* -------------------- */
@@ -266,6 +274,12 @@ body {
   text-align: initial;
 }
 
+.logo-p {
+  height: 70px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .values-title {
   text-align: center;
   margin-top: 30px;
@@ -297,19 +311,23 @@ body {
 .testimonials-section {
   padding: 60px 5%;
   background: #b2e0cf40;
-  position: relative;
-}
+  /* position: relative;*/
+} 
 
 /* Contenedor visible */
 .slider-container {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
-  position: relative;
+  /* position: relative; */
 }
 
 /* Track deslizante */
 .slider {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
   transition: transform 0.6s ease-in-out;
 }
@@ -363,7 +381,7 @@ body {
 
 @media (max-width: 600px) {
   .slide {
-    min-width: 100%; /* 1 por vista */
+  /*  min-width: 100%;  1 por vista */
     max-width: 100%;
   }
 
@@ -520,6 +538,14 @@ body {
       flex-direction: column;
       gap: 20px;
       text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .slider {
+    flex-direction: column;
   }
 }
 
