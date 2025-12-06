@@ -1,0 +1,534 @@
+/* -------------------- */
+/* ESTILOS GENERALES    */
+/* -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* -------------------- */
+/* NAVBAR */
+/* -------------------- */
+.navbar {
+  background-color: #9f2b68; /* tono ciruela que combina con tu marca */
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-navbar {
+  height: 70px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #b2e0cf;
+}
+
+/* -------------------- */
+/* HERO */
+/* -------------------- */
+.hero {
+  background: 
+      url("img/fondo.png") no-repeat center/cover;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  color: #9f2b68;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 1px 0 60px;
+}
+
+.btn {
+  background-color: #9f2b68;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #a1bea0;
+}
+
+/* -------------------- */
+/* MENÚ HAMBURGUESA */
+/* -------------------- */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Animación del icono */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mostrar menú en mobile */
+.nav-links.active {
+  display: flex !important;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  flex-direction: column;
+  background: #9f2b68;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex;
+  }
+  .nav-links {
+      display: none;
+  }
+}
+
+/* -------------------- */
+/* GRID SECTIONS */
+/* -------------------- */
+
+.logo-text {
+  height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin: 50px 0 20px;
+  color: #9f2b68;
+}
+
+.grid-section {
+  padding: 40px 5%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.grid-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px #00000015;
+}
+
+.grid-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+/* -------------------- */
+/* MATERNIDAD VIDEO */
+/* -------------------- */
+.video-item iframe {
+  border-radius: 12px;
+}
+
+/* -------------------- */
+/* TIENDA */
+/* -------------------- */
+.store-section {
+  padding: 40px 5%;
+  background: #b2e0cf40;
+}
+
+.store-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARDS */
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px #00000015;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔥 Hace que TODAS las imágenes tengan el mismo alto */
+.product-card img {
+  width: 100%;
+  height: 260px;      /* ✔ altura uniforme */
+  object-fit: cover;  /* ✔ recorta manteniendo proporción */
+  border-radius: 12px;
+}
+
+.store-btn-container {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 220px; /* un poco menos para mobile */
+  }
+}
+
+
+/* -------------------- */
+/* NOSOTROS */
+/* -------------------- */
+.about-section {
+  padding: 40px 5%;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: initial;
+}
+
+.values-title {
+  text-align: center;
+  margin-top: 30px;
+  color: #9f2b68;
+  font-size: 26px;
+}
+
+.values-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+.values-icons div {
+  text-align: center;
+}
+
+.values-icons i {
+  font-size: 40px;
+  color: #0f877b;
+  padding-bottom: 30px;
+}
+
+/* -------------------- */
+/* TESTIMONIOS (SLIDER NUEVO TIPO CARDS) */
+/* -------------------- */
+
+.testimonials-section {
+  padding: 60px 5%;
+  background: #b2e0cf40;
+  position: relative;
+}
+
+/* Contenedor visible */
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Track deslizante */
+.slider {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Cada tarjeta */
+.slide {
+  background: #fff;
+  min-width: calc(33.333% - 20px); /* 3 cards por vista */
+  max-width: calc(33.333% - 20px);
+  padding: 30px 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px #00000015;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: translateY(-6px);
+}
+
+/* Imagen de perfil */
+.slide img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.slide h3 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #9f2b68;
+}
+
+.slide p {
+  text-align: initial;
+  font-size: 15px;
+  color: #555;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .slide {
+    min-width: calc(50% - 20px); /* 2 por vista */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .slide {
+    min-width: 100%; /* 1 por vista */
+    max-width: 100%;
+  }
+
+}
+
+
+/* -------------------- */
+/* FAQ (ACORDEÓN) */
+/* -------------------- */
+
+.faq {
+  padding: 60px 5%;
+  background: #fff;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+
+.accordion-toggle {
+  width: 100%;
+  padding: 18px;
+  background: #f7f7f7;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+  color: #9f2b68;
+}
+
+.accordion-toggle::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.accordion-toggle[aria-expanded="true"]::after {
+  content: "-";
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  background: #fff;
+  transition: max-height 0.4s ease, padding 0.3s;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.accordion-item.active .accordion-panel {
+  max-height: 300px; /* suficiente para cualquier texto */
+  padding: 18px;
+}
+
+
+/* -------------------- */
+/* FOOTER */
+/* -------------------- */
+.footer {
+  background-color: #9f2b68;
+  color: #ffffff;
+  border-top: 3px solid #9f2b68;
+  padding: 30px 0;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-social a {
+  font-size: 22px;
+  color: #ffffff;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #a1bea0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  padding: 15px 0 5px;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- */
+/* RESPONSIVE */
+/* -------------------- */
+@media (max-width: 900px) {
+  .grid-container,
+  .products {
+      grid-template-columns: 1fr;
+  }
+
+  .values-icons {
+      flex-direction: column;
+  }
+
+  .footer-flex {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h2 {
+      font-size: 32px;
+  }
+
+  .nav-links {
+      display: none; /* versión simple sin menú hamburguesa */
+  }
+}
