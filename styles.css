@@ -148,6 +148,28 @@ body {
   }
 }
 
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;     /* ajustá según tu diseño */
+  margin: 2rem auto;   /* centra el video */
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+
+
+
 /* -------------------- */
 /* GRID SECTIONS */
 /* -------------------- */
@@ -175,6 +197,33 @@ body {
   gap: 30px;
 }
 
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------- */
+/* MATERNIDAD VIDEO RESPONSIVE */
+/* -------------------- */
+
+.grid-container-vid {
+  display: flex;
+  justify-content: center;
+}
+
+.video-item {
+  max-height: 360px;
+  max-width: 215px; /* controla tamaño en desktop */
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 100px;
+  border-radius: 12px;
+}
+
+
 .grid-item {
   background: #fff;
   border-radius: 12px;
@@ -186,14 +235,6 @@ body {
   width: 100%;
   border-radius: 12px;
   margin-top: 15px;
-}
-
-/* -------------------- */
-/* MATERNIDAD VIDEO */
-/* -------------------- */
-.video-item iframe {
-  border-radius: 12px;
-  width: 100%;
 }
 
 /* -------------------- */
